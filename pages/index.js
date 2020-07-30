@@ -1,5 +1,7 @@
 import Head from "next/head";
+import GithubCorner from 'react-github-corner';
 import HeroSection from "../components/HeroSection";
+
 const Home = () => (
   <div>
     <Head>
@@ -8,7 +10,7 @@ const Home = () => (
       <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
     </Head>
     <HeroSection />
-
+    <GithubCorner href="https://github.com/camachojuan/personal-website" />
     <style jsx global>{`
       html,
       body {
