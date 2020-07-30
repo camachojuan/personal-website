@@ -1,0 +1,23 @@
+.heroSection {
+  min-height: 100vh;
+  background-color: #264653;
+  text-align: center;
+  font-family: Raleway;
+  line-height: 1.5em;
+  font-size: 2em;
+  padding: 5rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.highlight {
+  color: #e9c46a;
+}
+
+.contactButtonPosition {
+  margin-top: 0.3em;
+}
