@@ -6,28 +6,3 @@
 .iconPosition {
   margin-left: 0.5em;
 }
-
-.awsbtn {
-  --button-default-height: 48px;
-  --button-default-font-size: 14px;
-  --button-default-border-radius: 6px;
-  --button-horizontal-padding: 20px;
-  --button-raise-level: 5px;
-  --button-hover-pressure: 2;
-  --transform-speed: 0.185s;
-  --button-primary-color: #e9c46a;
-  --button-primary-color-dark: #816e3b;
-  --button-primary-color-light: black;
-  --button-primary-color-hover: #bda258;
-  --button-primary-border: none;
-  --button-secondary-color: #fffc6c;
-  --button-secondary-color-dark: #b9b500;
-  --button-secondary-color-light: #6c6a00;
-  --button-secondary-color-hover: #fffb3e;
-  --button-secondary-border: none;
-  --button-anchor-color: #f3c8ad;
-  --button-anchor-color-dark: #734922;
-  --button-anchor-color-light: #4c3016;
-  --button-anchor-color-hover: #f1bfa0;
-  --button-anchor-border: 1px solid #8c633c;
-  }

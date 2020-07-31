@@ -1,0 +1,46 @@
+.contactSection {
+  background-color: #264653;
+  text-align: center;
+  font-family: Raleway;
+  line-height: 1.5em;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.contactForm {
+  width: 30%;
+}
+
+.contactFormTitle {
+  font-size: 2em;
+  padding-bottom: 2rem;
+}
+
+.highlight {
+  color: #e9c46a;
+}
+
+.contactButtonPosition {
+  margin-top: 0.3em;
+}
+
+.formGroup {
+  display: flex;
+  align-items: center;
+}
+
+.iconPosition {
+  margin-left: 0.5em;
+}
+
+.buttonContent {
+  display: flex;
+  align-items: center;
+}
+
+.afterSendMessage {
+  margin-top: 0.6em;
+}
