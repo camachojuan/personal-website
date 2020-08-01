@@ -5,7 +5,7 @@ This repo contains the source code of my personal website [`juanandrescamacho.co
 ## Stack
 - [Next.js](https://nextjs.org/docs) with an API route for the contact form
 - [reactstrap](https://github.com/reactstrap/reactstrap) for custom components
-- [coolors.co](https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51) for the color pallete
+- [coolors.co](https://coolors.co/264653-2a9d8f-e9c46a-f4a261-e76f51) for the color palette
 - [react-fontawesome](https://github.com/FortAwesome/react-fontawesome) for icons
 
 ## How to run
