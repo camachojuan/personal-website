@@ -22,6 +22,14 @@
   margin-top: 0.3em;
 }
 
+@media (max-width: 1250px) {
+  .heroSection {
+    font-size: 2em;
+  }
+  .title {
+    max-width: 90%;
+  }
+}
 
 .awsbtn {
   --button-default-height: 48px;
