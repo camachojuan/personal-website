@@ -1,0 +1,38 @@
+.skillsSection {
+  background-color: white;
+  text-align: center;
+  font-family: Raleway;
+  line-height: 1.5em;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+.elements {
+  display: grid;
+  grid-gap: 3rem;
+  justify-items: center;
+  grid-template-areas: "picture skillbars";
+}
+
+.whoIsThisGuy {
+  grid-area: picture;
+}
+
+.skillBars {
+  grid-area: skillbars;
+  width: 700px;
+}
+
+@media (max-width: 1250px) {
+  .elements {
+    grid-template-areas:
+      "picture"
+      "skillbars";
+  }
+  .skillBars {
+    width: 90%;
+  }
+}

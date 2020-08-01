@@ -1,0 +1,32 @@
+.barContainer {
+  display: flex;
+  width: 100%;
+  margin-bottom: 1rem;
+  color: white;
+  height: 30px;
+  text-align: center;
+}
+
+.skillName {
+  background-color: #4f8499;
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 1250px) {
+  .skillName {
+    width: 30%;
+  }
+}
+
+.skillPercentage {
+  background-color: #eee;
+  color: #666;
+  padding-right: 1rem;
+  text-align: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,19 @@
+.container {
+  max-width: 30rem;
+}
+
+@media (max-width: 1250px) {
+  .container {
+    min-width: 100%;
+  }
+}
+
+.question {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 0.5em;
+}
+
+.description {
+  margin-top: 0.5em;
+}
