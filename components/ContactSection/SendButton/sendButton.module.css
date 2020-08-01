@@ -1,0 +1,8 @@
+.buttonContent {
+  display: flex;
+  align-items: center;
+}
+
+.iconPosition {
+  margin-left: 0.5em;
+}

@@ -1,12 +1,16 @@
-// import { AwesomeButton } from "react-awesome-button";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-// import styles from "./contactButton.module.css";
+import WhoIsThisGuy from "./WhoIsThisGuy";
+import SkillBars from "./SkillBars";
+import styles from "./skillsSection.module.css";
 
 const SkillsSection = () => {
   return (
-    <div>
-      <div>skills</div>
+    <div className={styles.skillsSection}>
+      <div className={styles.elements}>
+        <WhoIsThisGuy className={styles.whoIsThisGuy} />
+        <div className={styles.skillBars}>
+          <SkillBars />
+        </div>
+      </div>
     </div>
   );
 };

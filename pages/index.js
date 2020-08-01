@@ -10,6 +10,7 @@ const Home = () => (
       <title>juanandrescamacho.com</title>
       <link rel="icon" href="/favicon.ico" />
       <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet" />
     </Head>
     <HeroSection />
     <SkillsSection />
@@ -29,7 +30,7 @@ const Home = () => (
         font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans,
           Droid Sans, Helvetica Neue, sans-serif;
       }
-      font-size: 16px;
+      font-size: 16px; 
       * {
         box-sizing: border-box;
       }
