@@ -9,12 +9,17 @@ const Home = () => (
   <>
     <NextSeo
       title="Juan Camacho"
-      description="Hi! I'm a full-stack web developer"
+      description="Hi! I'm Juan Camacho, a full stack web developer"
       canonical="https://juanandrescamacho.com/"
       openGraph={{
         url: "https://juanandrescamacho.com/",
         title: "Juan Camacho",
-        description: `Hi! I'm a full stack web developer`,
+        description: `Hi! I'm Juan Camacho, a full stack web developer`,
+      }}
+      twitter={{
+        handle: '@juancamacho86',
+        site: '@juancamacho86',
+        cardType: 'summary_large_image',
       }}
     />
     <div>
