@@ -3,62 +3,108 @@ import { FormGroup, Input } from "reactstrap";
 import { AwesomeButtonProgress } from "react-awesome-button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import styles from "./contactSection.module.css";
 import axios from "axios";
+import { useForm, Controller } from "react-hook-form";
+import styles from "./contactSection.module.css";
 
 const ContactSection = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [afterSendMessage, setAfterSendMessage] = useState("")
+  const [afterSendMessage, setAfterSendMessage] = useState("");
+  const [nameInvalid, setNameInvalid] = useState(false);
+  const [emailInvalid, setEmailInvalid] = useState(false);
+  const [messageInvalid, setMessageInvalid] = useState(false);
+  const { control, handleSubmit, getValues } = useForm();
 
-  const onSend = async (element, next) => {
-    const content = { name, email, message };
-    axios.post("api/sendEmail", content).then(() => {
-      setAfterSendMessage("Thank you! I'll get to you ASAP.")
-      next()
-    }).catch(error => {
-      setAfterSendMessage("There was an error sending the message.")
-      next(false, "Error!")
-  });;
+  const validateEmail = (email) => {
+    const re = /\S+@\S+\.\S+/;
+    return re.test(email);
   };
+
+  const validate = (content) => {
+    const isNameInvalid = content.name === "";
+    if (isNameInvalid) {
+      setNameInvalid(true);
+    } else {
+      setNameInvalid(false);
+    }
+    const isEmailInvalid = !validateEmail(content.email);
+    if (isEmailInvalid) {
+      setEmailInvalid(true);
+    } else {
+      setEmailInvalid(false);
+    }
+    const isMessageInvalid = content.message === "";
+    if (isMessageInvalid) {
+      setMessageInvalid(true);
+    } else {
+      setMessageInvalid(false);
+    }
+    return !isNameInvalid && !isEmailInvalid && !isMessageInvalid;
+  };
+
+  const onSend = (_, next) => {
+    const content = getValues(["name", "email", "message"]);
+    const validationResult = validate(content);
+    if (validationResult) {
+      axios
+        .post("api/sendEmail", content)
+        .then(() => {
+          setTimeout(() => {
+            setAfterSendMessage("Thank you! I'll get to you ASAP.");
+            next();
+          }, 500);
+        })
+        .catch((error) => {
+          setTimeout(() => {
+            setAfterSendMessage("There was an error sending the message.");
+            next(false, "Error!");
+          }, 500);
+        });
+    } else {
+      setTimeout(() => {
+        setAfterSendMessage("Please fill out all the fields");
+        next(false, "Error!");
+      }, 500);
+    }
+  };
+
   return (
     <section id="contact" className={styles.contactSection}>
       <div className={styles.contactFormTitle}>Say Hi!</div>
-
       <div className={styles.contactForm}>
         <FormGroup>
-          <Input
-            type="text"
-            name="name"
+          <Controller
+            as={Input}
             id="name"
+            control={control}
+            name="name"
+            defaultValue=""
             placeholder="Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            invalid={nameInvalid}
           />
         </FormGroup>
         <FormGroup>
-          <Input
-            type="email"
-            name="email"
+          <Controller
+            as={Input}
             id="email"
+            control={control}
+            name="email"
+            defaultValue=""
             placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            invalid={emailInvalid}
           />
         </FormGroup>
-
         <FormGroup>
-          <Input
-            type="textarea"
-            name="text"
+          <Controller
+            as={Input}
             id="message"
+            control={control}
+            name="message"
+            defaultValue=""
             placeholder="Your message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            type="textarea"
+            invalid={messageInvalid}
           />
         </FormGroup>
-
         <AwesomeButtonProgress
           type="primary"
           action={(element, next) => onSend(element, next)}
@@ -70,9 +116,7 @@ const ContactSection = () => {
           </div>
         </AwesomeButtonProgress>
       </div>
-      <div className={styles.afterSendMessage} >
-      {afterSendMessage}
-      </div>
+      <div className={styles.afterSendMessage}>{afterSendMessage}</div>
     </section>
   );
 };
