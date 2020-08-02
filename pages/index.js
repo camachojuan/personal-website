@@ -15,11 +15,16 @@ const Home = () => (
         url: "https://juanandrescamacho.com/",
         title: "Juan Camacho",
         description: `Hi! I'm Juan Camacho, a full stack web developer`,
+        images: [
+          {
+            url: "https://juanandrescamacho.com/images/profile-picture.png",
+          },
+        ],
       }}
       twitter={{
-        handle: '@juancamacho86',
-        site: '@juancamacho86',
-        cardType: 'summary_large_image',
+        handle: "@juancamacho86",
+        site: "@juancamacho86",
+        cardType: "summary_large_image",
       }}
     />
     <div>
