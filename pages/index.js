@@ -24,7 +24,7 @@ const Home = () => (
       twitter={{
         handle: "@juancamacho86",
         site: "@juancamacho86",
-        cardType: "summary_large_image",
+        cardType: "summary",
       }}
     />
     <div>
