@@ -30,7 +30,7 @@ const Home = () => (
     <div>
       <Head>
         <title>juanandrescamacho.com</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon/favicon.ico" />
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" />
         <link
           href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap"
