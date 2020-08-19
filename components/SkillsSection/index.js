@@ -1,5 +1,5 @@
 import WhoIsThisGuy from "./WhoIsThisGuy";
-import SkillBars from "./SkillBars";
+import SkillLogos from "./SkillLogos";
 import styles from "./skillsSection.module.css";
 
 const SkillsSection = () => {
@@ -8,7 +8,7 @@ const SkillsSection = () => {
       <div className={styles.elements}>
         <WhoIsThisGuy className={styles.whoIsThisGuy} />
         <div className={styles.skillBars}>
-          <SkillBars />
+          <SkillLogos />
         </div>
       </div>
     </div>

@@ -1,0 +1,22 @@
+.logos {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+@media (max-width: 1250px) {
+    .logos {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+    
+}
+
+.manyMore {
+  width: 100%;
+  text-align: center;
+  margin-top: 70px;
+  font-weight: 500;
+  font-size: 20px;
+}
