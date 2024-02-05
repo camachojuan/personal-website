@@ -2,7 +2,9 @@
   "name": "nextjs",
   "version": "0.1.0",
   "private": true,
-  "engines": { "node": "20.x" },
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -25,6 +27,7 @@
     "reactstrap": "^8.5.1"
   },
   "devDependencies": {
-    "@zeit/next-css": "^1.0.1"
+    "@zeit/next-css": "^1.0.1",
+    "encoding": "^0.1.13"
   }
 }
