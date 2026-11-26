@@ -1,34 +1,32 @@
 {
-  "name": "nextjs",
+  "name": "personal-website",
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "20.x"
+    "node": "22.x"
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "eslint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.30",
-    "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "@fortawesome/react-fontawesome": "^0.1.11",
-    "axios": "^0.21.2",
-    "bootstrap": "^4.5.0",
-    "next": "^12.1.0",
-    "next-seo": "^4.7.3",
-    "node-fetch": "^3.3.2",
-    "react": "^17.0.0",
-    "react-anchor-link-smooth-scroll": "^1.0.12",
-    "react-awesome-button": "^6.5.1",
-    "react-dom": "^17.0.0",
-    "react-github-corner": "^2.3.0",
-    "react-hook-form": "^6.2.0",
-    "reactstrap": "^8.5.1"
+    "lucide-react": "^1.81.0",
+    "motion": "^14.14.0",
+    "next": "16.4.6",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "simple-icons": "^16.38.1"
   },
   "devDependencies": {
-    "@zeit/next-css": "^1.0.1",
-    "encoding": "^0.1.13"
+    "@tailwindcss/turbopack": "4.3.3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.4.6",
+    "tailwindcss": "4.3.3",
+    "typescript": "^5"
   }
 }
